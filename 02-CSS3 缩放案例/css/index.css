@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+#box {
+    margin: 10px auto;
+    padding: 10px;
+    width: 780px;
+    background-color: #333;
+}
+#box ul::after,
+#bbox ul::before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+#box li {
+    width: 250px;
+    height: 150px;
+    margin: 5px;
+    float: left;
+}
+#box img {
+    width: 250px;
+    height: 150px;
+    transition: all 0.5s;
+}
+#box li:hover img{
+    transform: scale(0.3);
+}
