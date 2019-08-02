@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    width: 250px;
+    height: 30px;
+    margin: 20px auto;
+}
+ul {
+    list-style: none;
+}
+ul li {
+    float: left;
+    width: 50px;
+    height: 30px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #ccc;
+    /* 视距 */
+    perspective: 500px;
+    /* 3d呈现 */
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+ul li:hover {
+    transform: rotateX(90deg);
+}
+ul li:nth-child(n+1) {
+    margin-left: 2px;
+}
+ul li div{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+}
+ul li div:first-child {
+    background-color: pink;
+    left: 0;
+    top: 0;
+    transform: translateZ(15px);
+}
+ul li div:last-child {
+    background-color: purple;
+    left: 0;
+    top: 0;
+    transform: translateY(15px) rotateX(-90deg);
+}
